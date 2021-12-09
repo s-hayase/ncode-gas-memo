@@ -36,10 +36,12 @@
   - [while](#while)
 - [配列：千本ノック 7セット目⚾️配列⚾️](#配列千本ノック-7セット目️配列️)
     - [書き方](#書き方-3)
-  - [forEach](#foreach)
-  - [for of](#for-of)
+  - [forEach：MDN Reference](#foreachmdn-reference)
+  - [for of：MDN Reference](#for-ofmdn-reference)
 - [オブジェクト：千本ノック 9セット目⚾️オブジェクト⚾️](#オブジェクト千本ノック-9セット目️オブジェクト️)
     - [書き方](#書き方-4)
+- [Mapオブジェクト：千本ノック 10セット目⚾️ハッシュマップ⚾️](#mapオブジェクト千本ノック-10セット目️ハッシュマップ️)
+    - [書き方](#書き方-5)
 
 # 値：[千本ノック 1セット目⚾️数値演算⚾️](https://d2tlis2max4tew.cloudfront.net/gas/ABGSZZ10_G001/ABGSZZ10_G001.html)
 
@@ -196,7 +198,7 @@ console.log(`${data1}と${data2}を足した結果は${a}です`);//5
 
 ## if文
 
-* 条件が成り立った時、{}の中に書いた処理を実行する。
+* 条件が成り立った時、`{}`の中に書いた処理を実行する。
 
 ![if文](img/if.png "if文")
 
@@ -209,8 +211,8 @@ if(num%3===0){
 
 ### else
 
-* 条件が成り立った時、{}の中に書いた処理を実行する。
-* 条件が成り立たなかった時、elseの{}の中に書いた処理を実行する。
+* 条件が成り立った時、`{}`の中に書いた処理を実行する。
+* 条件が成り立たなかった時、`else`の`{}`の中に書いた処理を実行する。
 
 ![elseのあるif文](img/if_else.png "elseのあるif文")
 
@@ -225,8 +227,8 @@ if(num%3===0){
 ```
 ### else-if文
 
-* 順々に条件を調べていって成り立った直下の{}の処理を実行。
-* どの条件にも当てはまらなかった場合、elseの{}の中に書いた処理を実行する。
+* 順々に条件を調べていって成り立った直下の`{}`の処理を実行。
+* どの条件にも当てはまらなかった場合、`else`の`{}`の中に書いた処理を実行する。
 
 ![else-if文](img/elseif.png "else-if文")
 
@@ -310,7 +312,7 @@ console.log(personList[0]);//太郎
 console.log(personList[1]);//次郎
 console.log(personList[2]);//三郎
 ```
-## forEach
+## forEach：[MDN Reference](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 * 設定した関数を、配列の各要素に対して一度ずつ実行する。
 * 変数1には配列の要素
 * 変数2には番号
@@ -332,7 +334,7 @@ personList.forEach(function(e,i){
 ```
 
 
-## for of
+## for of：[MDN Reference](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for...of)
 * 設定した関数を、配列の各要素に対して一度ずつ実行する。
 * forEachとは違って配列以外(mapオブジェクトやsetオブジェクトなど)にも使える
 * 変数には配列の要素が代入される
@@ -377,3 +379,36 @@ let person = {
 console.log(person.name);//太郎
 console.log(person.age);//15
 ```
+
+# Mapオブジェクト：[千本ノック 10セット目⚾️ハッシュマップ⚾️](https://d2tlis2max4tew.cloudfront.net/gas/ABGSZZ10_G010/ABGSZZ10_G010.html)
+
+* 複数の要素を1まとめに扱うことができる
+* それぞれの要素に名前(キー)が必要
+  * 名前にはあらゆる要素が使える(関数やオブジェクトも使える)
+* 要素を追加した順番が保持される
+
+### 書き方
+* `new Map()`でMapオブジェクトを用意する。
+```
+let 変数 = new Map();
+```
+* 追加は`変数.set(キー,要素)`、削除は`変数.delete(キー,要素)`
+
+```js
+let mapObj = new Map();
+mapObj.set(`太郎`,15);
+mapObj.set(`次郎`,14);
+mapObj.set(`三郎`,13);
+mapObj.delete(`三郎`);
+```
+
+* `変数.get(キー)`で要素を取得できる
+
+```js
+mapObj.get(`太郎`);//15
+mapObj.get(`次郎`) = 15;//error 代入することはできない
+mapObj.set(`次郎`,15);//15に上書き
+mapObj.get(`次郎`);//15
+```
+
+
