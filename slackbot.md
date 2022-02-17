@@ -30,48 +30,25 @@
 
 アクセスするとGoogleないしappleアカウントでのログインかメールアドレスの入力を求められますがどれでもかまいません。
 
-<p class="image-with-caption">
-    <img src="image/workspace1.png">
-    <span class="imagecaption photo">どれでも可</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/workspace2.png">
-    <span class="imagecaption photo">Googleアカウントの場合</span>
-</p>
+<img src="image/workspace1.png">
+<img src="image/workspace2.png">
 
 では早速「ワークスペースを作成する」から作っていきましょう。
 
-<p class="image-with-caption">
-    <img src="image/workspace3.png">
-    <span class="imagecaption photo">ワークスペースを作成する</span>
-</p>
+<img src="image/workspace3.png">
 
 ワークスペースの名前は何でもかまいません。画面では適当に「botのテスト用」としました。
 
-<p class="image-with-caption">
-    <img src="image/workspace4.png">
-    <span class="imagecaption photo">ワークスペースの名前を設定</span>
-</p>
+<img src="image/workspace4.png">
 
 ワークスペースの説明についても適当でかまいません。
 
-<p class="image-with-caption">
-    <img src="image/workspace5.png">
-    <span class="imagecaption photo">ワークスペースの説明</span>
-</p>
+<img src="image/workspace5.png">
 
 チームメンバーを追加はスキップしましょう。
 
-<p class="image-with-caption">
-    <img src="image/workspace6.png">
-    <span class="imagecaption photo">チームメンバーを追加</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/workspace7.png">
-    <span class="imagecaption photo">ワークスペースが作成できた</span>
-</p>
+<img src="image/workspace6.png">
+<img src="image/workspace7.png">
 
 
 <h3 id="slackアプリを作る"> slackアプリを作る</h3>
@@ -84,31 +61,18 @@
 
 「Create an App」から「From scrach」を選択。
 
-<p class="image-with-caption">
-    <img src="image/slackapp1.png">
-    <span class="imagecaption photo">Create an App</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/slackapp2.png">
-    <span class="imagecaption photo">From scrach</span>
-</p>
+<img src="image/slackapp1.png">
+<img src="image/slackapp2.png">
 
 「App Name」にこれから作るアプリの名前を入力しましょう。これも適当なもので構いません。
 
 「Pick a workspace to develop your app in」には先ほど作成した開発用のワークスペースを選択し、できたら「Create App」をクリックしましょう。
 
-<p class="image-with-caption">
-    <img src="image/slackapp3.png">
-    <span class="imagecaption photo">名前とワークスペースの設定</span>
-</p>
+<img src="image/slackapp3.png">
 
 すると以下のような画面になったかと思います。
 
-<p class="image-with-caption">
-    <img src="image/slackapp4.png">
-    <span class="imagecaption photo">Basic Information</span>
-</p>
+<img src="image/slackapp4.png">
 
 <h4 id="botのアイコンの設定"> botのアイコンの設定</h4>
 
@@ -117,10 +81,7 @@
 「Basic Information」の画面から下にスクロールしていくと「Display Information」でbotのアイコンを設定することができます。
 
 
-<p class="image-with-caption">
-    <img src="image/slackapp5.png">
-    <span class="imagecaption photo">Display Information</span>
-</p>
+<img src="image/slackapp5.png">
 
 
 あまり小さい画像だと設定することができない(512pxから2000pxまでのサイズが必要)ので適当なサイズのものを設定すると良いでしょう。
@@ -135,27 +96,13 @@
 
 画面左のメニューから「OAuth & Permissions」画面を開き「Scopes」の、
 
-<p class="image-with-caption">
-    <img src="image/slackapp6.png">
-    <span class="imagecaption photo">OAuth & Permissions</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/slackapp7.png">
-    <span class="imagecaption photo">Scopes</span>
-</p>
+<img src="image/slackapp6.png">
+<img src="image/slackapp7.png">
 
 「Bot Token Scopes」の「Add an OAuth Scope」から「Channels:history」を設定します。
 
-<p class="image-with-caption">
-    <img src="image/slackapp8.png">
-    <span class="imagecaption photo">Channels:historyを選択</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/slackapp9.png">
-    <span class="imagecaption photo">権限を付与できた</span>
-</p>
+<img src="image/slackapp8.png">
+<img src="image/slackapp9.png">
 
 ##### 補足
 * 公開のチャンネルのメッセージを取得したい場合：```channels:history```
@@ -166,10 +113,7 @@
 
 ではいよいよ「イベント(slackにメッセージが投稿されたら)が発生したら指定したURLにメッセージを送信する」という設定をしたいのですが…。
 
-<p class="image-with-caption">
-    <img src="image/slackapp10.png">
-    <span class="imagecaption photo">Request URLが必要</span>
-</p>
+<img src="image/slackapp10.png">
 
 送り先のwebアプリのURLが必要なのでこの時点ではまだ設定することができません。
 
@@ -216,41 +160,24 @@ Google Apps Script は ウェブアプリや API として公開できる機能 
 
 右上の青い「デプロイ」と書かれているボタンをクリックしてメニューを出します。
 
-<p class="image-with-caption">
-    <img src="image/gas1.png">
-    <span class="imagecaption photo">右上の青い「デプロイ」</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/gas2.png">
-    <span class="imagecaption photo">「新しいデプロイ」を選択</span>
-</p>
+<img src="image/gas1.png">
+<img src="image/gas2.png">
 
 デプロイの設定ウィンドウが表示されます。
 「種類の選択」の横にある歯車のアイコンをクリックしてメニューを表示し、「ウェブアプリ」を選択してください。
 
-<p class="image-with-caption">
-    <img src="image/gas3.png">
-    <span class="imagecaption photo">「ウェブアプリ」を選択</span>
-</p>
-
+<img src="image/gas3.png">
 
   「新しい説明文」には、アプリの説明を記入して下さい。  
   「ユーザー」には自分のアカウントを設定して下さい。  
   「アクセスできるユーザー」には **全員** を設定して下さい。これは、LINE が受信したメッセージを Google Apps Script ウェブアプリに送信しますので、それを受信できるようにこのように設定しています。
 
-<p class="image-with-caption">
-    <img src="image/gas4.png">
-    <span class="imagecaption photo">アクセスできるユーザーを全員に設定する</span>
-</p>
+<img src="image/gas4.png">
 
 
 設定が完了し、「デプロイ」ボタンをクリックするとウェブアプリがデプロイされ、ID と URL が発行されます。
 
-<p class="image-with-caption">
-    <img src="image/gas5.png">
-    <span class="imagecaption photo">ID と URL</span>
-</p>
+<img src="image/gas5.png">
 
 
 上の 「ウェブアプリ」の URL を控えておきます。
@@ -265,10 +192,7 @@ Google Apps Script は ウェブアプリや API として公開できる機能 
 
 ちゃんとchallengeパラメータを送り返すことができていれば、Verified(確認済み)という表示になります。
 
-<p class="image-with-caption">
-    <img src="image/slackapp11.png">
-    <span class="imagecaption photo">Enable EventsをONにしてURLを登録</span>
-</p>
+<img src="image/slackapp11.png">
 
 確認ができたら、「Subscribe to bot events」の「Add Bot User Event」でbotが反応するイベントに「message.channels(公開チャンネルにメッセージに投稿されたら)」を追加します。
 
@@ -283,24 +207,15 @@ Google Apps Script は ウェブアプリや API として公開できる機能 
 
 「Incoming Webhooks」の「Activate Incoming Webhooks」をONにします。
 
-<p class="image-with-caption">
-    <img src="image/slackapp13.png">
-    <span class="imagecaption photo">Incoming WebhooksをON</span>
-</p>
+<img src="image/slackapp13.png">
 
 「Add New Webhook to Workspace」から開発用のワークスペースにIncoming Webhooks をインストールします。
 
 投稿先のチャンネルは適当なものでかまいません。
 
-<p class="image-with-caption">
-    <img src="image/slackapp14.png">
-    <span class="imagecaption photo">開発用のワークスペースにIncoming Webhooks をインストール</span>
-</p>
+<img src="image/slackapp14.png">
 
-<p class="image-with-caption">
-    <img src="image/slackapp15.png">
-    <span class="imagecaption photo">任意のチャンネルを選択</span>
-</p>
+<img src="image/slackapp15.png">
 
 再インストールを求められた場合は、「reinstall your app」から再インストールしましょう。
 
@@ -373,20 +288,9 @@ function doPost(e){
 
 「デプロイを管理」から「編集」、「バージョン」から「新バージョン」を選択しましょう。
 
-<p class="image-with-caption">
-    <img src="image/gas6.png">
-    <span class="imagecaption photo">デプロイを管理</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/gas7.png">
-    <span class="imagecaption photo">編集</span>
-</p>
-
-<p class="image-with-caption">
-    <img src="image/gas8.png">
-    <span class="imagecaption photo">新バージョンを選択</span>
-</p>
+<img src="image/gas6.png">
+<img src="image/gas7.png">
+<img src="image/gas8.png">
 
 <h3 id="botをチャンネルに追加する">botをチャンネルに追加する</h3>
 
@@ -394,20 +298,12 @@ function doPost(e){
 
 ```/invite @作成したBot名```
 
-<p class="image-with-caption">
-    <img src="image/workspace8.png">
-    <span class="imagecaption photo">botをチャンネルに招待</span>
-</p>
+<img src="image/workspace8.png">
 
-<p class="image-with-caption">
-    <img src="image/workspace9.png">
-    <span class="imagecaption photo">招待ができた</span>
-</p>
+<img src="image/workspace9.png">
 
-<p class="image-with-caption">
-    <img src="image/workspace10.png">
-    <span class="imagecaption photo">おうむ返しをするおうむbot</span>
-</p>
+<img src="image/workspace10.png">
+
 
 
 

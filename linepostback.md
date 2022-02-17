@@ -5,10 +5,7 @@
 
 今回はポストバックアクションを使い、ボタン付きのメッセージを送り、どのボタンが押されたか取得することで、押したボタンに応じて仕事やプライベートなど別々の予定を通知するlinebotを作ってみましょう。
 
-<p class="image-with-caption">
-    <img src="image/example.jpg">
-    <span class="imagecaption photo">完成例</span>
-</p>
+<img src="image/example.jpg">
 
 ### 目次
 
@@ -34,17 +31,11 @@
 
 インストールができたら早速「プロジェクトを作成」からプロジェクトを用意してみましょう。
 
-<p class="image-with-caption">
-    <img src="image/LINEBotDesigner_1.png">
-    <span class="imagecaption photo">LINE Bot Designerを開いたところ</span>
-</p>
+<img src="image/LINEBotDesigner_1.png">
 
 「プロジェクト設定」のBot名、会社名、カテゴリーは適当なものでOKです。
 
-<p class="image-with-caption">
-    <img src="image/LINEBotDesigner_2.png">
-    <span class="imagecaption photo">プロジェクト設定</span>
-</p>
+<img src="image/LINEBotDesigner_2.png">
 
 <h4 id="テンプレート作成"> テンプレート作成</h4>
 
@@ -52,10 +43,7 @@
 
 他のものが気になる方はぜひ[公式ドキュメント](https://developers.line.biz/ja/docs/messaging-api/actions/)を参考に挑戦してみてください。
 
-<p class="image-with-caption">
-    <img src="image/LINEBotDesigner_3.png">
-    <span class="imagecaption photo">「メッセージ」の「ボタン型テンプレートメッセージ」</span>
-</p>
+<img src="image/LINEBotDesigner_3.png">
 
 <h4 id="画像を用意しよう"> 画像を用意しよう</h4>
 
@@ -93,10 +81,7 @@ https://drive.google.com/uc?id=ファイルID
   アクション1例：仕事  
   アクション2 例：プライベート  
 
-<p class="image-with-caption">
-    <img src="image/LINEBotDesigner_4.png">
-    <span class="imagecaption photo">入力例</span>
-</p>
+<img src="image/LINEBotDesigner_4.png">
 
 入力し終えたら、右下の「JSON」と表示されている枠の中のコードをこの後使うので、LINEBotDesignerを開いたままにするか、適当にメモしておきましょう。
 
@@ -302,10 +287,7 @@ replyWithText関数はそのまま利用します。
 
 以上の改造ができたら、保存し、[再度ウェブアプリとしてデプロイ](https://d2tlis2max4tew.cloudfront.net/gas/ABGSZZ07_G002/ABGSZZ07_G002.html#GASアプリケーションの更新)して手元で確認してみましょう。
 
-<p class="image-with-caption">
-    <img src="image/example2.jpg">
-    <span class="imagecaption photo">どのボタンが押されたか</span>
-</p>
+<img src="image/example2.jpg">
 
 <h3 id="カレンダーの用意">カレンダーの用意</h3>
 
@@ -313,24 +295,15 @@ replyWithText関数はそのまま利用します。
 
 新しくカレンダーを用意するには「他のカレンダーを追加」から
 
-<p class="image-with-caption">
-    <img src="image/calendar1.png">
-    <span class="imagecaption photo">他のカレンダーを追加</span>
-</p>
+<img src="image/calendar1.png">
 
 「新しいカレンダーを作成」し、
 
-<p class="image-with-caption">
-    <img src="image/calendar2.png">
-    <span class="imagecaption photo">新しいカレンダーを作成</span>
-</p>
+<img src="image/calendar2.png">
 
 任意の名前でカレンダーを作ることができます。
 
-<p class="image-with-caption">
-    <img src="image/calendar3.png">
-    <span class="imagecaption photo">新しいカレンダーを作成2</span>
-</p>
+<img src="image/calendar3.png">
 
 これでそれぞれのカレンダーが用意できたので、以下ではカレンダーの名前に応じて予定を取得するプログラムを書いていこうと思います。
 
@@ -372,14 +345,8 @@ function getScheduleTest(){
 ```
 
 
-<p class="image-with-caption">
-    <img src="image/log.png">
-    <span class="imagecaption photo">仕事のスケジュールのみ取得できた</span>
-</p>
-<p class="image-with-caption">
-    <img src="image/calendar4.png">
-    <span class="imagecaption photo">仕事のスケジュールのみ取得できた</span>
-</p>
+<img src="image/log.png">
+<img src="image/calendar4.png">
 
 
 あとは以上の要素を組み合わせ
