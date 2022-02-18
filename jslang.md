@@ -312,7 +312,8 @@ console.log(personList[0]);//太郎
 console.log(personList[1]);//次郎
 console.log(personList[2]);//三郎
 ```
-## forEach：[MDN Reference](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+## forEach
+
 * 設定した関数を、配列の各要素に対して一度ずつ実行する。
 * 変数1には配列の要素
 * 変数2には番号
@@ -334,7 +335,7 @@ personList.forEach(function(e,i){
 ```
 
 
-## for of：[MDN Reference](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/for...of)
+## for of
 * 設定した関数を、配列の各要素に対して一度ずつ実行する。
 * forEachとは違って配列以外(mapオブジェクトやsetオブジェクトなど)にも使える
 * 変数には配列の要素が代入される
